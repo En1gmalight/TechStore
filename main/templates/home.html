@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/iphones.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reviews.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/review_detail.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_review.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/callback_request.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'main/img/favicon.ico' %}">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a class="archivo-black-regular" href="{% url 'home_page' %}">Home</a></li>
+                <li><a class="archivo-black-regular" href="{% url 'iphones_page' %}">iPhone</a></li>
+                <li><a class="archivo-black-regular" href="{% url 'reviews_page' %}">Reviews</a></li>
+                <li><a class="archivo-black-regular" href="{% url 'about_page' %}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        {% block content %}
+        <h1 class="archivo-black-regular">iPhone 15 Pro Max</h1>
+        <h3>Already in stock<br>at the lowest price in Minsk</h3>
+
+        <a href="{% url 'iphones_page' %}" class="catalog-button">To Catalog</a>
+
+        <div class="form-container">
+            <form action="{% url 'submit_form' %}" method="post">
+
+                {% csrf_token %}
+
+                <h2 style="text-align: center;">Order a Callback</h2>
+
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                <input type="submit" value="Order Call">
+            </form>
+            <img src="{% static 'main/img/15_pro_max.png' %}" class="iphone-image">
+        </div>
+        {% endblock %}
+    </div>
+    <footer class="footer">
+        <a href="{% url 'home_page' %}" class="footer-link">© {% now "Y" %} iStore.by</a>
+    </footer>
+</body>
+
+</html>

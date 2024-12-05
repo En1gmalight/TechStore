@@ -1,0 +1,17 @@
+.callback-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: normal;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    color: #484747;
+}
+
+.callback-subtitle {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: normal;
+    position: relative;
+    top: 60px;
+    left: -321px;
+    color: #484747;
+}

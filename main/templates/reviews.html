@@ -1,0 +1,31 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Reviews{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/reviews.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="archivo-black-regular">Customer Reviews</h1>
+
+<a href="{% url 'add_reviews_page' %}" class="unique-submit-btn unique-leave-review-btn">Leave a Review</a>
+
+<div class="container">
+    <ul class="unique-review-list">
+        {% for review in reviews %}
+        <li class="unique-review" style="background-color: rgba(255, 255, 255, 0.8);">
+            <h2>{{ review.title }}</h2>
+            <p>{{ review.content }}</p>
+            <p>Author: {{ review.author.name }}</p>
+            <p>Posted on: {{ review.issued }}</p>
+            {% if review.image %}
+            <img src="{{ review.image.url }}" alt="Review Image">
+            {% endif %}
+            <a href="{% url 'review_detail_page' review.id %}" class="unique-read-more-btn">Read more</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

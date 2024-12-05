@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Add Review{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_review.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="archivo-black-regular">Add a Review</h1>
+
+<div class="review-container">
+    <div class="review-column">
+        <form method="post" enctype="multipart/form-data" class="review-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="review-submit-btn">Add Review</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

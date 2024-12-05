@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Review Detail{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/review_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="archivo-black-regular">Review Detail</h1>
+<div class="container review-detail">
+    <div class="column">
+        <h3>{{ review.title }}</h3>
+        {% if review.image %}
+        <img src="{{ review.image.url }}" class="review-image">
+        {% else %}
+        <p>[NO IMAGE]</p>
+        {% endif %}
+        <p>{{ review.content }}</p>
+        <p>Author: {{ review.author.name }}</p>
+        <p>Posted on: {{ review.issued }}</p>
+    </div>
+</div>
+{% endblock %}

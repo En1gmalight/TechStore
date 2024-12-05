@@ -1,0 +1,46 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>PHONE:</strong> +375 (29) 777-77-55 (9:00-21:00, daily)</p>
+        <p><strong>EMAIL:</strong> info@iStore.by</p>
+    </div>
+
+    <div class="about-content">
+        <h1 class="archivo-black-regular">About iStore.by</h1>
+        <p>iStore.by is an official Apple products and accessories store in Belarus. In our stores, you can not only buy
+            an iPhone, a Mac computer or an iPad tablet, but also other Apple devices and accessories for them. iStore
+            is primarily a place imbued with the atmosphere of Apple, where you will be helped to choose equipment,
+            taught how to use it, given advice on the operation of your gadgets and offered high-quality accessories</p>
+
+
+        <p>At iStore, you can work with any Mac, iPhone or iPad, watch demonstrations of recently released Apple
+            products or participate in trainings, workshops and events dedicated to the latest technologies. Just ask,
+            and we will select a suitable course for you. We know everything about Apple products. And we are ready to
+            share our knowledge</p>
+
+        <p>Our sellers are true experts in their field. And high-quality, convenient, easy-to-use Apple technology
+            brings pleasure to its users and practically does not require technical support</p>
+
+    </div>
+
+    <div class="store-locations">
+        <h2>Our Stores</h2>
+        <div class="store">
+            <h3>Pobediteley, 5 | +375 (29) 777-77-55</h3>
+            <p>Mon – Sun: 09:00 – 21:00</p>
+            <p>Free parking is available for store visitors</p>
+            <p>At our store, you will always buy everything you need</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

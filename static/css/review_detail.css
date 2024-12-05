@@ -1,0 +1,38 @@
+/* для изображений */
+.review-detail .review-image {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    position: static !important;
+}
+
+/* для содержимого отзыва */
+.review-detail .review-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* для текста отзыва */
+.review-detail .review-text {
+    margin-left: 20px;
+}
+
+/* доп стили для регулирования размера и положения изображения */
+.review-detail .review-image {
+    width: 50%;
+    height: auto;
+    margin-top: 145px;
+    margin-right: 0;
+    margin-bottom: -65px;
+    margin-left: 105px;
+}
+
+/* для отзывов */
+.review-detail {
+    border: 0px solid #dddddd !important;
+    padding: 25px !important;
+    margin: 10px 0 10px 20px !important;
+    background-color: rgba(255, 255, 255, 0.262) !important;
+    border-radius: 10px !important;
+    width: 50%;
+}

@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Callback Request{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/callback_request.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3 class="callback-title">Thank you for your request!</h3>
+    <h3 class="callback-subtitle">Our specialist will contact you shortly to clarify the details</h3>
+</div>
+{% endblock %}

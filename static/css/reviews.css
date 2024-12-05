@@ -1,0 +1,106 @@
+/* отзывы */
+.unique-review {
+    border: 0px solid #ddd !important;
+    padding: 5px !important;
+    margin: 10px 0 10px 20px !important;
+    background-color: rgba(255, 255, 255, 0.262) !important;
+    border-radius: 10px !important;
+    width: 80%;
+    padding-left: 20px;
+}
+
+/* для заголовка отзыва */
+.unique-review h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+/* для текста отзыва */
+.unique-review p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 35px;
+}
+
+/* для изображений в отзывах */
+.unique-review img {
+    max-width: 100px !important;
+    height: auto !important;
+    margin: 85px 0 -20px -420px !important;
+    position: relative;
+}
+
+/* список отзывов */
+.unique-review-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* кнопка "Read more" */
+.unique-read-more-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #484747;
+    text-decoration: none;
+    border: 2px solid #484747;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.unique-read-more-btn:hover {
+    background-color: #484747;
+    color: #fff;
+}
+
+/* изменения размера и положения кнопки */
+.unique-review a.unique-read-more-btn {
+    width: 90px;
+    height: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 24px;
+}
+
+/* кнопка "Leave a Review" */
+.unique-submit-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #484747;
+    border: 2px solid #484747;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.unique-submit-btn:hover {
+    background-color: #484747;
+    color: #fff;
+}
+
+/* стили для кнопки "Leave a Review" */
+.unique-leave-review-btn {
+    position: relative;
+    top: 60px;
+    left: 20px;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #484747;
+    border: 2px solid #484747;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.unique-leave-review-btn:hover {
+    background-color: #484747;
+    color: #fff;
+}

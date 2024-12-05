@@ -1,0 +1,55 @@
+/* контейнер */
+.review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: transparent !important;
+}
+
+/* колонки */
+.review-column {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+    left: -420px !important;
+}
+
+/* поле ввода Title */
+input[name="title"] {
+    width: 300px !important;
+    max-width: 100% !important;
+    padding: 6px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+}
+
+/* кнопка "Add Review" */
+.review-submit-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #484747;
+    text-decoration: none;
+    border: 2px solid #484747;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.review-submit-btn:hover {
+    background-color: #484747;
+    color: #fff;
+}
+
+/* форма */
+.review-form {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.262);
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}

@@ -1,0 +1,41 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block title %}iPhone{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/iphones.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="archivo-black-regular">Best prices on Apple technology in Minsk with free delivery across Belarus</h1>
+<div class="container">
+    <div class="column">
+        <h2>Apple iPhone 15/Plus/Pro/Pro Max</h2>
+        <ul>
+            {% for iphone in iphones_15 %}
+            <li><span style="font-weight: bold;">{{ iphone.name }} {{ iphone.memory }}</span> <span
+                    style="float: right; text-align: right; width: 100px;">${{ iphone.price|floatformat:0 }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="column">
+        <h2>Apple iPhone 14/Plus/Pro/Pro Max</h2>
+        <ul>
+            {% for iphone in iphones_14 %}
+            <li><span style="font-weight: bold;">{{ iphone.name }} {{ iphone.memory }}</span> <span
+                    style="float: right; text-align: right; width: 100px;">${{ iphone.price|floatformat:0 }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="column">
+        <h2>Apple iPhone 13/mini/Pro/Pro Max</h2>
+        <ul>
+            {% for iphone in iphones_13 %}
+            <li><span style="font-weight: bold;">{{ iphone.name }} {{ iphone.memory }}</span> <span
+                    style="float: right; text-align: right; width: 100px;">${{ iphone.price|floatformat:0 }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
